@@ -1,3 +1,6 @@
+html, body {
+  height:100%;
+}
 .page-header{
   background: #5f68ff;
   display: flex;
@@ -37,8 +40,8 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  min-height: 100%;
   background: rgba(0, 0, 0, 0.7);
   display: flex;
   justify-content: center;
@@ -83,13 +86,13 @@
 /* ***** --------------------- Content -------------------- ***** */
 .email-modal__container{
   background: #5f68ff;
+  margin:20px;
   max-width: 700px;
   width: 100%;
   color: white;
   display: flex;
   position: relative;
   overflow: hidden;
-  /* flex-direction: column; */
 }
 .email-modal__info{
   width: 100%;
@@ -216,13 +219,13 @@
  
   .email-modal__container {
     /* background-image: linear-gradient(rgba(65, 65, 255, 1), rgba(0, 0, 255, 0.65)), url('../img/pexels-photo-4462782.jpeg'); */
-    background-image: linear-gradient(rgba(65, 65, 255, 0.9), rgba(65, 65, 255, 0.9)), url('../img/pexels-photo-4462782.jpeg');
+    background-image: linear-gradient(rgba(65, 65, 255, 0.85), rgba(65, 65, 255, 0.89)), url('../img/pexels-photo-4462782.jpeg');
     width:65%;
     padding:15px;
   }
   .email-modal__message {
-    /* background-color: #0000ff4f;
-    box-shadow: 0 0 10px 6px #0000ff42; */
+    font-size: 1.25rem;
+    font-weight: 300;
     padding: 6px;
   }
 }
