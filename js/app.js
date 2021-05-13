@@ -32,7 +32,7 @@ window.onload = function() {
     };
 
     // *** -------- Collect Email -------- *** //
-    emailButton.addEventListener('click', () =>{
+    function collectEmail(e){
         let emailVal = emailInput.value;
         console.log(emailIsValid(emailVal))
         // Valid Email ------ ***
@@ -50,7 +50,14 @@ window.onload = function() {
            errorBorder.classList.add('error-border') 
         }
         emailInput.value = ''
+    };
+    emailInput.addEventListener('keyup', (e) => {
+        if (e.keyCode === 13) {
+            e.preventDefault();
+            collectEmail()
+        }
     });
+    emailButton.addEventListener('click', collectEmail);
 
     // *** -------- Opt out of email and exit modal -------- *** //
     declineOffer.addEventListener('click', ()=> {
